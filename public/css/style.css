@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  position: relative;
+}
+
+header {
+  width: 100%;
+  height: 100px;
+}
+
+header > .logo {
+  position: absolute;
+  width: 200px;
+  bottom: 10px;
+  left: 10px;
+}
+
+nav ul {
+  background-color: black;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  display: inline-block;
+}
+
+.nav-item a {
+  display: block;
+  padding: 20px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-item a:hover {
+  background-color: rgb(30, 30, 30);
+}
+
+#interface {
+  text-align: center;
+  height: 600px;
+}
+
+#keypad-area, #graph-area, #result-area {
+  display: inline-block;
+  width: 33%;
+  height: 100%;
+  padding: 0;
+}
+
+#keypad-area form {
+  width: 100%;
+  height: 100%;
+}
+
+.keypad {
+  width: 100%;
+  height: 100%;
+  border-spacing: 0;
+}
+
+#keypad-input, .keypad button {
+  width: 100%;
+  height: 100%;
+  font-size: 2em;
+  border: 1px solid black;
+}
+
+.keypad td {
+  width: 15%;
+  height: 15%;
+}
+
+.keypad button {
+  background-color: whitesmoke;
+}
+
+.keypad button:hover {
+  background-color: white;
+}
+
+#graph {
+  border: 1px solid #d3d3d3;
+  display: block;
+  margin: auto;
+}
+
+.grabbable {
+  cursor: grab;
+}
+
+.grabbable:active {
+  cursor: grabbing;
+}
+
+#result {
+  width: 100%;
+  height: 100%;
+  resize: none;
+  border: 1px solid black;
+  font-size: 2em;
+}
+
+@media only screen and (max-width: 900px) {
+  #keypad-area {
+    float: left;
+    width: 50%;
+    height: 50%;
+  }
+  #graph-area {
+    float: right;
+    width: 50%;
+    height: 50%;
+  }
+  #result-area {
+    clear: both;
+    width: 100%;
+    height: 50%;
+  }
+}
